@@ -18,7 +18,8 @@ public class BKM {
         KieSession kieSession = kieContainer.newKieSession();
         kieSession.insert(season);
 
-        kieSession.fireAllRules();
+        int fireAllRules = kieSession.fireAllRules();
+        System.out.println("fireAllRules: "+fireAllRules);
 
         Collection<? extends Object> objects = kieSession.getObjects();
 
