@@ -6,11 +6,22 @@
   </dmn:inputData>
   <dmn:businessKnowledgeModel id="_B767CC92-356C-4FE7-9F5A-BA2EE071B8FB" name="XSL Knowledge">
     <dmn:variable id="_AB46AAD0-B50A-49EF-BD75-94C968B8829B" name="XSL Knowledge" typeRef="number"/>
-    <dmn:encapsulatedLogic id="_F4D6609C-49D0-40D2-BE2C-8A4AD13824C3" kind="FEEL">
-      <dmn:formalParameter id="_6C4997ED-6F5E-4BE5-9087-1EA016201F14" name="Season" typeRef="string"/>
-      <dmn:literalExpression id="_BA896FCB-F28C-41BB-96DC-948AB3D61270">
-        <dmn:text>.9</dmn:text>
-      </dmn:literalExpression>
+    <dmn:encapsulatedLogic id="_F4D6609C-49D0-40D2-BE2C-8A4AD13824C3" kind="Java">
+      <dmn:formalParameter id="_6C4997ED-6F5E-4BE5-9087-1EA016201F14" name="season" typeRef="string"/>
+      <dmn:context id="_10143C91-7B4A-473A-BC30-CB45BB4DF9A1">
+        <dmn:contextEntry>
+          <dmn:variable id="_E44C9F4A-1153-4993-8FBB-90A60BF88DF7" name="class" typeRef="string"/>
+          <dmn:literalExpression id="_CCEB5CFD-E649-4021-B78F-5963F8B94EA1">
+            <dmn:text>com.demo.BKM</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_D00A39EB-0C71-4230-AA67-DCF68E57F5A4" name="method signature" typeRef="string"/>
+          <dmn:literalExpression id="_3EC2DFAB-AE00-42CD-8A1B-F85BE40B2AE7">
+            <dmn:text>xlsKnowledge(java.lang.String)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
   <dmn:inputData id="_B1A81EAB-5591-4A75-8AA7-D6CB1D89B96C" name="Season">
@@ -36,21 +47,29 @@ else Price</dmn:text>
     <dmndi:DMNDiagram>
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_BA896FCB-F28C-41BB-96DC-948AB3D61270">
-            <kie:width>421.0</kie:width>
+          <kie:ComponentWidths dmnElementRef="_10143C91-7B4A-473A-BC30-CB45BB4DF9A1">
+            <kie:width>50.0</kie:width>
+            <kie:width>129.0</kie:width>
+            <kie:width>443.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CCEB5CFD-E649-4021-B78F-5963F8B94EA1">
+            <kie:width>443.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_3EC2DFAB-AE00-42CD-8A1B-F85BE40B2AE7">
+            <kie:width>443.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_561443B7-66C0-40A1-B87B-E039D2F27CE1">
             <kie:width>521.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-_B1A81EAB-5591-4A75-8AA7-D6CB1D89B96C" dmnElementRef="_B1A81EAB-5591-4A75-8AA7-D6CB1D89B96C" isCollapsed="false">
+      <dmndi:DMNShape id="dmnshape-_A097D4D3-125A-4EE9-9B73-6DC61505518A" dmnElementRef="_A097D4D3-125A-4EE9-9B73-6DC61505518A" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="382" y="205" width="100" height="50"/>
+        <dc:Bounds x="134.59813084112147" y="205" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_B767CC92-356C-4FE7-9F5A-BA2EE071B8FB" dmnElementRef="_B767CC92-356C-4FE7-9F5A-BA2EE071B8FB" isCollapsed="false">
@@ -62,6 +81,15 @@ else Price</dmn:text>
         <dc:Bounds x="492" y="62" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_B1A81EAB-5591-4A75-8AA7-D6CB1D89B96C" dmnElementRef="_B1A81EAB-5591-4A75-8AA7-D6CB1D89B96C" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="382" y="205" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_3028BCAD-AF46-4CA8-ACEF-BC0DF87F638D" dmnElementRef="_3028BCAD-AF46-4CA8-ACEF-BC0DF87F638D" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -71,26 +99,17 @@ else Price</dmn:text>
         <dc:Bounds x="259" y="62" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_A097D4D3-125A-4EE9-9B73-6DC61505518A" dmnElementRef="_A097D4D3-125A-4EE9-9B73-6DC61505518A" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="134.59813084112147" y="205" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-_329B6CCA-719E-46FC-B34F-639C891B8157" dmnElementRef="_329B6CCA-719E-46FC-B34F-639C891B8157">
         <di:waypoint x="234.59813084112147" y="230"/>
         <di:waypoint x="259" y="87"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_009CE2E9-EC5D-48DB-A13D-1DA17F2B0C64" dmnElementRef="_009CE2E9-EC5D-48DB-A13D-1DA17F2B0C64">
-        <di:waypoint x="492" y="87"/>
-        <di:waypoint x="359" y="87"/>
-      </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_9EC36C02-F491-407D-A1C5-65E9AA5BB17C" dmnElementRef="_9EC36C02-F491-407D-A1C5-65E9AA5BB17C">
         <di:waypoint x="432" y="205"/>
         <di:waypoint x="309" y="112"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_009CE2E9-EC5D-48DB-A13D-1DA17F2B0C64" dmnElementRef="_009CE2E9-EC5D-48DB-A13D-1DA17F2B0C64">
+        <di:waypoint x="492" y="87"/>
+        <di:waypoint x="359" y="87"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
