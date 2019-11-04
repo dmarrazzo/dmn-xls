@@ -1,0 +1,7 @@
+rule "simple test"
+when
+    s : String( this == "Winter");
+then
+    System.out.println("simple fired");
+    insert(new Double(0.5));
+end
