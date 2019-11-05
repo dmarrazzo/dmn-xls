@@ -17,12 +17,8 @@ import org.kie.internal.command.CommandFactory;
  */
 public class BKM {
     private static KieServices ks = KieServices.Factory.get();
-    private static KieContainer kieContainer;
+    private static KieContainer kieContainer = ks.getKieClasspathContainer(BKM.class.getClassLoader());;
 
-    public BKM () {
-        kieContainer = ks.getKieClasspathContainer(BKM.class.getClassLoader());
-    }
-    
     public static double xlsKnowledge(String season) {
         double result = 0.9;
         StatelessKieSession kieSession = kieContainer.newStatelessKieSession("ksession");
