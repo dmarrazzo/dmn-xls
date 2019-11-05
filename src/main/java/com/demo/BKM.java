@@ -22,7 +22,7 @@ public class BKM {
     public static double xlsKnowledge(String season) {
         double result = 0.9;
         StatelessKieSession kieSession = kieContainer.newStatelessKieSession();
-        List<Command> cmds = new ArrayList();
+        List<Command<?>> cmds = new ArrayList<>();
         cmds.add(CommandFactory.newInsert(season, "season"));
         cmds.add(CommandFactory.newFireAllRules());
         cmds.add(CommandFactory.newGetObjects(new ClassObjectFilter(Double.class), "doubles"));
