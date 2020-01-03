@@ -7,6 +7,7 @@
   <dmn:businessKnowledgeModel id="_B767CC92-356C-4FE7-9F5A-BA2EE071B8FB" name="XSL Knowledge">
     <dmn:variable id="_AB46AAD0-B50A-49EF-BD75-94C968B8829B" name="XSL Knowledge" typeRef="number"/>
     <dmn:encapsulatedLogic id="_F4D6609C-49D0-40D2-BE2C-8A4AD13824C3" kind="Java">
+      <dmn:formalParameter id="_6C4997ED-6F5E-4BE5-9087-1EA016201F14ab" name="dmnRuntime" typeRef="Any" />
       <dmn:formalParameter id="_6C4997ED-6F5E-4BE5-9087-1EA016201F14" name="season" typeRef="string"/>
       <dmn:context id="_10143C91-7B4A-473A-BC30-CB45BB4DF9A1">
         <dmn:contextEntry>
@@ -18,7 +19,7 @@
         <dmn:contextEntry>
           <dmn:variable id="_D00A39EB-0C71-4230-AA67-DCF68E57F5A4" name="method signature" typeRef="string"/>
           <dmn:literalExpression id="_3EC2DFAB-AE00-42CD-8A1B-F85BE40B2AE7">
-            <dmn:text>xlsKnowledge(java.lang.String)</dmn:text>
+            <dmn:text>xlsKnowledge(org.kie.dmn.api.core.DMNRuntime, java.lang.String)</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
       </dmn:context>
@@ -39,7 +40,7 @@
       <dmn:requiredKnowledge href="#_B767CC92-356C-4FE7-9F5A-BA2EE071B8FB"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_561443B7-66C0-40A1-B87B-E039D2F27CE1">
-      <dmn:text>if Price > 10 then XSL Knowledge (Season) * Price
+      <dmn:text>if Price > 10 then XSL Knowledge(dmnRuntime(), Season) * Price
 else Price</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
